@@ -1,4 +1,4 @@
-# ProbeSimulator
+# Probe Simulator
 
 To start your Phoenix server:
 

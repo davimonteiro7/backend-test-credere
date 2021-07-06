@@ -13,24 +13,21 @@ defmodule ProbeSimulatorWeb.ProbeController do
     |> handle_response(conn)
   end
 
-  defp handle_response({:ok, result, status}, conn),    do: render_response(conn, result, status)
-  defp handle_response({:error, _}, conn),    do: render_response(conn, :bad_request)
-
-  defp render_response(conn, result, :ok) do
+  defp handle_response({:ok, result}, conn) do
     conn
     |> put_status(:ok)
     |> json(result)
   end
 
-  defp render_response(conn, result, status) do
+  defp handle_response({:ok, result, status}, conn) do
     conn
     |> put_status(status)
     |> json(result)
   end
 
-  defp render_response(conn, :bad_request) do
+  defp handle_response({:error, reason, status}, conn) do
     conn
-    |> put_status(:bad_request)
-    |> json(%{error: "Um movimento inválido foi detectado."})
+    |> put_status(status)
+    |> json(reason)
   end
 end

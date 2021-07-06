@@ -11,9 +11,9 @@ defmodule ProbeSimulator.Probes.RepositoryTest do
 
   describe "insert/1" do
     test "insert a new probe on ETS table" do
-
+      :ets.delete_all_objects(:probe_cache)
       response = Repository.insert(@probe)
-      assert {:ok, _} = response
+      assert response == true
     end
   end
 
@@ -22,7 +22,7 @@ defmodule ProbeSimulator.Probes.RepositoryTest do
       Repository.insert(@probe)
       result = Repository.get()
 
-      expected_result = {:ok, %{face: "D", movements: [], position: %{x: 0, y: 0}}}
+      expected_result = {:ok, [%{face: "D", movements: [], position: %{x: 0, y: 0}}]}
       assert result == expected_result
     end
   end
