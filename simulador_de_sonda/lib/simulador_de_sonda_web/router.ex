@@ -7,6 +7,8 @@ defmodule SimuladorDeSondaWeb.Router do
 
   scope "/api", SimuladorDeSondaWeb do
     pipe_through :api
+
+    get "/", SondaController, :index
   end
 
   # Enables LiveDashboard only for development
