@@ -19,6 +19,10 @@ defmodule ProbeSimulator.Probes.Repository do
     GenServer.call(@name, :get)
   end
 
+  def delete() do
+    GenServer.call(@name, :delete)
+  end
+
   def handle_call(:get, _ref, state) do
     result = :ets.first(:probe_cache)
     case result do
@@ -29,10 +33,22 @@ defmodule ProbeSimulator.Probes.Repository do
   end
 
   def handle_call({:insert, data}, _ref, state) do
-    result = :ets.insert_new(:probe_cache, {[data]})
-    case result do
-      {:error, _} -> {:reply, {:error, "Inexistent ETS table"}, state}
-      _ -> {:reply, result, state}
+    try do
+      result = :ets.insert_new(:probe_cache, {data})
+      {:reply, result, state}
+    catch
+      error, _   ->
+        {:reply, {error, "Failed to create probe, check if exists a cache table"}, state}
+    end
+  end
+
+  def handle_call(:delete, _ref, state) do
+    try do
+      result = :ets.delete_all_objects(:probe_cache)
+      {:reply, result, state}
+    catch
+      error, _   ->
+        {:reply, {error, "Failed to update probe, check if exists a cache table"}, state}
     end
   end
 end

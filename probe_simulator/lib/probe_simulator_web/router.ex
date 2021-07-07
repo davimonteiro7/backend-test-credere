@@ -10,6 +10,7 @@ defmodule ProbeSimulatorWeb.Router do
 
     get "/create", ProbeController, :create
     get "/get", ProbeController, :get
+    post "/move_probe", ProbeController, :move_probe
   end
 
   # Enables LiveDashboard only for development

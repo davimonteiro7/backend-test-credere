@@ -4,8 +4,8 @@ defmodule ProbeSimulator.Probes.RepositoryTest do
   alias ProbeSimulator.Probes.Repository
 
   @probe  %{
-    position: %{x: 0, y: 0},
-    movements: [],
+    x: 0,
+    y: 0,
     face: "D"
   }
 
@@ -26,5 +26,4 @@ defmodule ProbeSimulator.Probes.RepositoryTest do
       assert result == expected_result
     end
   end
-
 end
