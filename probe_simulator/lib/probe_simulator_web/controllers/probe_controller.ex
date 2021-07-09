@@ -8,7 +8,7 @@ defmodule ProbeSimulatorWeb.ProbeController do
     |> handle_response(conn)
   end
 
-  def get_probe(conn, _params) do
+  def show_probe(conn, _params) do
     GetProbe.call()
     |> handle_response(conn)
   end

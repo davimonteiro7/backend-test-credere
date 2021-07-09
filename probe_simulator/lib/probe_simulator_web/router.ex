@@ -9,7 +9,7 @@ defmodule ProbeSimulatorWeb.Router do
     pipe_through :api
 
     get  "/probe_simulator/send_probe", ProbeController, :send_probe
-    get  "/probe_simulator/get_probe",    ProbeController, :get_probe
+    get  "/probe_simulator/show_probe",    ProbeController, :show_probe
     post "/probe_simulator/move_probe",   ProbeController, :move_probe
   end
 
