@@ -8,7 +8,7 @@ defmodule ProbeSimulatorWeb.Router do
   scope "/api", ProbeSimulatorWeb do
     pipe_through :api
 
-    get  "/probe_simulator/create_probe", ProbeController, :create_probe
+    get  "/probe_simulator/send_probe", ProbeController, :send_probe
     get  "/probe_simulator/get_probe",    ProbeController, :get_probe
     post "/probe_simulator/move_probe",   ProbeController, :move_probe
   end

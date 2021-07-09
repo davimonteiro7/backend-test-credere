@@ -1,4 +1,4 @@
-defmodule ProbeSimulator.Probes.CreateProbe do
+defmodule ProbeSimulator.Probes.SendProbe do
 
   alias ProbeSimulator.Probes.ProbeRepository
 

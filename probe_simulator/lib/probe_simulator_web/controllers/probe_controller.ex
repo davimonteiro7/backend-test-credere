@@ -1,10 +1,10 @@
 defmodule ProbeSimulatorWeb.ProbeController do
   use ProbeSimulatorWeb, :controller
 
-  alias ProbeSimulator.Probes.{CreateProbe, GetProbe, MoveProbe}
+  alias ProbeSimulator.Probes.{SendProbe, GetProbe, MoveProbe}
 
-  def create_probe(conn, _params) do
-    CreateProbe.call()
+  def send_probe(conn, _params) do
+    SendProbe.call()
     |> handle_response(conn)
   end
 

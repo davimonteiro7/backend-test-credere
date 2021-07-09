@@ -7,7 +7,7 @@ defmodule ProbeSimulator.Probes.ProbeRepository do
 
   def init(_) do
     IO.puts("Creating ETS #{@name}")
-    :ets.new(:probe_cache, [:duplicate_bag, :public, :named_table])
+    :ets.new(:probe_cache, [:set, :public, :named_table])
     {:ok, "ETS Created"}
   end
 

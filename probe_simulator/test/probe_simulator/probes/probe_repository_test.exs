@@ -1,29 +1,29 @@
-defmodule ProbeSimulator.Probes.ProbeProbeRepositoryTest do
-  use ExUnit.Case, async: true
+defmodule ProbeSimulator.Probes.ProbeRepositoryTest do
+  use ExUnit.Case
 
   alias ProbeSimulator.Probes.ProbeRepository
 
-  @probe  %{
-    x: 0,
-    y: 0,
-    face: "D"
-  }
-
   describe "insert/1" do
     test "insert a new probe on ETS table" do
-      :ets.delete_all_objects(:probe_cache)
-      response = ProbeRepository.insert(@probe)
-      assert response == true
+
+      response = ProbeRepository.insert(%{ x: 0, y: 0, face: "D" })
+      expected_response = true
+      assert response == expected_response
+
+      ProbeRepository.delete()
     end
   end
 
   describe "get/0" do
     test "return the probe inserted on ETS table" do
-      ProbeRepository.insert(@probe)
-      result = ProbeRepository.get()
 
-      expected_result = {:ok, [%{face: "D", movements: [], position: %{x: 0, y: 0}}]}
-      assert result == expected_result
+      ProbeRepository.insert(%{ x: 0, y: 0, face: "D" })
+      response = ProbeRepository.get()
+
+      expected_response = {:ok, %{face: "D", x: 0, y: 0}}
+      assert response == expected_response
+
+      ProbeRepository.delete()
     end
   end
 end
