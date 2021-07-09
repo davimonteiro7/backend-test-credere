@@ -99,7 +99,8 @@
   
 * **Data Params**
 
-  Exemplo válido : {
+
+   Exemplo válido : {
                      "movimentos": ["GE", "M", "M", "M", "GD", "M", "M","M"]
                    }
 
