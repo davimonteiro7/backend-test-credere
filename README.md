@@ -1,4 +1,4 @@
-# Teste back-end - Credere
+### Teste back-end - Credere
 
   Projeto para responder o desáfio técnico no link abaixo:
   
@@ -8,7 +8,7 @@
 
 ----
 
-# Instruções
+### Instruções
   
   * **Instalar Elixir/Erlang**
     
@@ -27,7 +27,7 @@
 
 ----
 
-# Endpoints
+### Endpoints
 
 **Enviar sonda**
 ----
