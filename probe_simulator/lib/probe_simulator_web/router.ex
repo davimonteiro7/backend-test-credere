@@ -8,9 +8,9 @@ defmodule ProbeSimulatorWeb.Router do
   scope "/api", ProbeSimulatorWeb do
     pipe_through :api
 
-    get "/create", ProbeController, :create
-    get "/get", ProbeController, :get
-    post "/move_probe", ProbeController, :move_probe
+    get  "/probe_simulator/create_probe", ProbeController, :create_probe
+    get  "/probe_simulator/get_probe",    ProbeController, :get_probe
+    post "/probe_simulator/move_probe",   ProbeController, :move_probe
   end
 
   # Enables LiveDashboard only for development

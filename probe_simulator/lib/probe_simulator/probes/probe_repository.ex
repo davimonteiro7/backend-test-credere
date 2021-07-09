@@ -1,4 +1,4 @@
-defmodule ProbeSimulator.Probes.Repository do
+defmodule ProbeSimulator.Probes.ProbeRepository do
   use GenServer
 
   @name __MODULE__

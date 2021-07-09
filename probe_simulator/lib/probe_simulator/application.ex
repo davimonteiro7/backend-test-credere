@@ -15,7 +15,7 @@ defmodule ProbeSimulator.Application do
       ProbeSimulatorWeb.Endpoint,
       # Start a worker by calling: ProbeSimulator.Worker.start_link(arg)
       # {ProbeSimulator.Worker, arg}
-      ProbeSimulator.Probes.Repository
+      ProbeSimulator.Probes.ProbeRepository
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
