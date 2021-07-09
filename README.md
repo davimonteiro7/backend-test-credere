@@ -1,3 +1,21 @@
+**INSTRUÇÕES**
+  
+  * **Instalar Elixir/Erlang**
+    
+    * Instalar com asdf em linux: https://www.pluralsight.com/guides/                   i   installing-elixir-erlang-with-asdf
+  
+  * **Instalar Phoenix**
+    
+    * https://hexdocs.pm/phoenix/installation.html
+
+  * **Baixar/executar projeto**
+    
+    * `git clone https://github.com/davimonteiro7/backend-test-credere.git`
+    * `cd backend-test-credere/probe_simulator`
+    * `mix deps.get`
+    * `mix phx.server`
+
+----
 **Enviar sonda**
 ----
   Envia uma sonda para a posição inicial (0,0) em um quadrante delimitado.
