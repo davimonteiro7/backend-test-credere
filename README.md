@@ -1,8 +1,18 @@
-**INSTRUÇÕES**
+# Teste back-end - Credere
+
+  Projeto para responder o desáfio técnico no link abaixo:
+  
+  * https://github.com/meucredere/backend
+
+  Utilizando Elixir/Phoenix para construir a API.
+
+----
+
+# Instruções
   
   * **Instalar Elixir/Erlang**
     
-    * Instalar com asdf em linux: https://www.pluralsight.com/guides/                   i   installing-elixir-erlang-with-asdf
+    * Instalar com asdf em linux: https://www.pluralsight.com/guides/installing-elixir-erlang-with-asdf                   i   
   
   * **Instalar Phoenix**
     
@@ -16,6 +26,9 @@
     * `mix phx.server`
 
 ----
+
+# Endpoints
+
 **Enviar sonda**
 ----
   Envia uma sonda para a posição inicial (0,0) em um quadrante delimitado.
