@@ -1,4 +1,4 @@
-### Teste back-end - Credere
+## Teste back-end - Credere
 
   Projeto para responder o desáfio técnico no link abaixo:
   
@@ -8,7 +8,7 @@
 
 ----
 
-### Instruções
+## Instruções
   
   * **Instalar Elixir/Erlang**
     
@@ -27,10 +27,10 @@
 
 ----
 
-### Endpoints
+## Endpoints
 
-**Enviar sonda**
-----
+### Enviar sonda
+
   Envia uma sonda para a posição inicial (0,0) em um quadrante delimitado.
   Retorna um objeto JSON com uma mensagem de sucesso na criação.
 
@@ -57,8 +57,7 @@
 
 ----
 
-**Mostrar sonda**
-----
+### Mostrar sonda
   
   Retorna um objeto JSON com as informações da sonda enviada.
 
@@ -84,9 +83,10 @@
 
   local: `curl GET http://localhost:4000/api/probe_simulator/show_probe -v` 
 
-**Movimentar sonda**
 ----
-  
+
+### Movimentar sonda
+
   Retorna um objeto JSON com as informações atualizadas da sonda e uma descrição da sua movimentação.
 
 * **URL**
